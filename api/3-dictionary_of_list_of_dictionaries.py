@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
- Python script to export data in the JSON format.
+Python script to export data in the JSON format.
 """
 
 import json
@@ -13,8 +13,10 @@ if __name__ == '__main__':
     user_tasks_dict = {}
     
     for user_id in unique_user_ids:
-        user_info = requests.get(f'https://jsonplaceholder.typicode.com/users/{user_id}').json()
-        user_tasks = requests.get(f'https://jsonplaceholder.typicode.com/users/{user_id}/todos').json()
+        user_info = requests.get(
+            f'https://jsonplaceholder.typicode.com/users/{user_id}').json()
+        user_tasks = requests.get(
+            f'https://jsonplaceholder.typicode.com/users/{user_id}/todos').json()
         
         formatted_tasks = [{
             "username": user_info['username'],
