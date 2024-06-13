@@ -15,7 +15,7 @@ if __name__ == '__main__':
     todos_response = requests.get(
         f'https://jsonplaceholder.typicode.com/todos')
     user_tasks = [
-    task for task in todos_response.json() if task.get('userId') == user_id
+        task for task in todos_response.json() if task.get('userId') == user_id
     ]
 
     with open(f"{user_id}.csv", 'a', newline='', encoding="utf-8") as csvfile:
