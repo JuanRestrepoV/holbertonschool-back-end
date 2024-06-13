@@ -9,7 +9,7 @@ from sys import argv
 if __name__ == '__main__':
     user_id = int(argv[1])
     user_response = requests.get(
-    f'https://jsonplaceholder.typicode.com/users/{user_id}')
+        f'https://jsonplaceholder.typicode.com/users/{user_id}')
     username = user_response.json().get('username')
 
     todos_response = requests.get(
